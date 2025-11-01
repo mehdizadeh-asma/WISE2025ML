@@ -36,12 +36,12 @@ class ExtractFeatures:
         return "\n".join([f"Word: '{tupla[0]}' - Frequency: {tupla[1]}" for tupla in MostCommonWords])
     def PrintInformation(self, n=10):
         print(f"1. Total Words: {self.NumberOfWords()}")
-        print(f"2. Average Word Length: {self.AverageWordLength():.2f}")
+        print(f"2. Average Word Length: {self.AverageWordLength():.2f} letters per word")
         print(f"3. Total Sentences: {self.NumberOfSentences()}")
-        print(f"4. Average Words Per Sentence: {self.AverageWordsPerSentence():.2f}")
+        print(f"4. Average Words Per Sentence: {self.AverageWordsPerSentence():.2f} words/sentence")
         print(f"5. Most {n} commons Words: \n\n{self.MostCommonWords(n)}")
 
 # Import TSV file
 df = pd.read_csv('dataset.tsv', sep='\t')
 ExtractDfFeatures = ExtractFeatures(df)
-ExtractDfFeatures.PrintInformation(n=15)
+ExtractDfFeatures.PrintInformation(n=20)
