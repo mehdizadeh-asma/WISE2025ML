@@ -1,6 +1,9 @@
-import pandas as pd
-import re
+
+import subprocess
+import sys
+subprocess.check_call([sys.executable, "-m", "pip", "install", "nltk", "pandas"])
 import nltk
+import pandas as pd
 nltk.download('punkt_tab')
 from nltk.tokenize import word_tokenize
 from collections import Counter
